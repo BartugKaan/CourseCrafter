@@ -4,6 +4,8 @@
 
 CourseCrafter is a modern web application that helps educators and professionals create comprehensive learning content effortlessly using AI. Whether you're a teacher, trainer, or someone who wants to organize knowledge into structured courses, CourseCrafter makes it simple and fast.
 
+You can test it via: <a href="https://course-crafter-amber.vercel.app/">CourseCrafter</a>
+
 ![CourseCrafter Banner](https://img.shields.io/badge/CourseCrafter-AI%20Powered%20Course%20Creation-green?style=for-the-badge&logo=graduation-cap)
 
 ## ✨ Features

@@ -68,7 +68,7 @@ const Footer = () => {
                   Open Source
                 </h4>
                 <Link
-                  href="https://github.com/BartugKaan/course-crafter"
+                  href="https://github.com/BartugKaan/coursecrafter"
                   target="_blank"
                   className="inline-flex items-center px-4 py-2 bg-gray-800/50 hover:bg-gray-700/50 border border-gray-600/50 hover:border-gray-500/50 rounded-lg text-gray-300 hover:text-white transition-all duration-200 group"
                 >

@@ -34,14 +34,14 @@ You can test it via: <a href="https://course-crafter-one.vercel.app/">CourseCraf
 
 - Local API key storage (never sent to servers)
 - Client-side processing for privacy
-- Secure OpenAI API integration
+- Secure Gemini API integration
 
 ## 🛠️ Tech Stack
 
 - **Framework**: Next.js 15 with App Router
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **AI Integration**: OpenAI GPT-3.5-turbo
+- **AI Integration**: Google Gemini
 - **Deployment**: Vercel-ready
 
 ## 🚀 Getting Started
@@ -50,7 +50,7 @@ You can test it via: <a href="https://course-crafter-one.vercel.app/">CourseCraf
 
 - Node.js 18+
 - npm, yarn, pnpm, or bun
-- OpenAI API key
+- Google Gemini API key
 
 ### Installation
 
@@ -84,11 +84,28 @@ You can test it via: <a href="https://course-crafter-one.vercel.app/">CourseCraf
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-### Setting Up OpenAI API
+### Setting Up Gemini API
 
-1. Get your OpenAI API key from [OpenAI Platform](https://platform.openai.com/api-keys)
-2. When you first use CourseCrafter, you'll be prompted to enter your API key
-3. The key is stored locally in your browser for future use
+1. Get your Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+
+2. **Create environment file**
+
+   Create a `.env.local` file in the root directory of your project:
+
+   ```bash
+   touch .env.local
+   ```
+
+   Add your Gemini API key to the file:
+
+   ```env
+   NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+
+   Replace `your_gemini_api_key_here` with your actual Gemini API key.
+
+3. When you first use CourseCrafter, you'll be prompted to enter your API key
+4. The key is stored locally in your browser for future use
 
 ## 📖 How to Use
 
@@ -113,12 +130,9 @@ You can test it via: <a href="https://course-crafter-one.vercel.app/">CourseCraf
 
 ## 🎨 Screenshots
 
-
 ### Landing Page
 
-
 ![LandingPage](https://github.com/user-attachments/assets/0ac0bcff-9bb9-4f35-97c7-5ef45767761a)
-
 
 ### Course Creation Form
 
@@ -128,8 +142,6 @@ You can test it via: <a href="https://course-crafter-one.vercel.app/">CourseCraf
 ### View Generated Course
 
 ![ViewCourse](https://github.com/user-attachments/assets/fa25e717-67ca-4f7e-a10c-91dfe22b06c6)
-
-
 
 ## 🌟 Key Benefits
 
@@ -155,7 +167,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- OpenAI for providing the powerful GPT API
+- Google for providing the powerful Gemini API
 - Next.js team for the amazing framework
 - Tailwind CSS for the beautiful styling system
 - All contributors and users who make this project better

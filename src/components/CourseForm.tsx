@@ -50,7 +50,7 @@ const CourseForm = ({ onCourseGenerated }: CourseFormProps) => {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+    <div className="mt-4 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 px-6 py-8 sm:px-8">
         <div className="text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">

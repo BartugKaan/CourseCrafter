@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import generateCourse from '@/lib/generateCourse'
 import { Module } from '@/models/course'
+import generateCourse from '@/lib/generateCourse'
 
 interface CourseFormProps {
   onCourseGenerated: (
@@ -19,28 +19,17 @@ const CourseForm = ({ onCourseGenerated }: CourseFormProps) => {
   const [courseLevel, setCourseLevel] = useState('beginner')
   const [courseLanguage, setCourseLanguage] = useState('en')
   const [courseDuration, setCourseDuration] = useState('')
-  const [includeVideos, setIncludeVideos] = useState('yes')
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-
-    const apiKey = sessionStorage.getItem('openai-api-key')
-    if (!apiKey) {
-      alert('Please set your OpenAI API key first.')
-      setLoading(false)
-      return
-    }
 
     try {
       const result = await generateCourse(
         title,
         description,
-        apiKey,
         courseLevel,
         courseLanguage,
-        courseDuration,
-        includeVideos
+        courseDuration
       )
 
       // Ensure result is an array before setting modules
@@ -54,9 +43,7 @@ const CourseForm = ({ onCourseGenerated }: CourseFormProps) => {
       }
     } catch (error) {
       console.error('Error generating course:', error)
-      alert(
-        'An error occurred while generating the course. Please check your API key and try again.'
-      )
+      alert('An error occurred while generating the course. Please try again.')
     } finally {
       setLoading(false)
     }
@@ -111,7 +98,7 @@ const CourseForm = ({ onCourseGenerated }: CourseFormProps) => {
             />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {/* Course Level */}
             <div className="space-y-2">
               <label className="block text-sm font-semibold text-gray-900">
@@ -163,21 +150,6 @@ const CourseForm = ({ onCourseGenerated }: CourseFormProps) => {
                 placeholder="e.g., 8"
                 className="w-full px-4 py-3 text-gray-900 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 placeholder-gray-400"
               />
-            </div>
-
-            {/* Include video resources */}
-            <div className="space-y-2">
-              <label className="block text-sm font-semibold text-gray-900">
-                Include Video Resources?
-              </label>
-              <select
-                value={includeVideos}
-                onChange={(e) => setIncludeVideos(e.target.value)}
-                className="w-full px-4 py-3 text-gray-900 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer"
-              >
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
             </div>
           </div>
 

@@ -111,19 +111,23 @@ CourseCrafter is a modern web application that helps educators and professionals
 
 ## 🎨 Screenshots
 
-- Coming Soon
 
 ### Landing Page
 
-Beautiful, modern landing page with clear value proposition and feature highlights.
+
+![LandingPage](https://github.com/user-attachments/assets/0ac0bcff-9bb9-4f35-97c7-5ef45767761a)
+
 
 ### Course Creation Form
 
-Intuitive form with all customization options for creating the perfect course.
+![ApıKeyInput](https://github.com/user-attachments/assets/ea87689d-6688-4502-a133-26ddd211eeee)
+![GenerateCourse](https://github.com/user-attachments/assets/2c7c25b9-602e-409a-b145-4377199479bb)
 
-### 404 Page
+### View Generated Course
 
-Even our error pages are designed with care and provide helpful navigation options.
+![ViewCourse](https://github.com/user-attachments/assets/fa25e717-67ca-4f7e-a10c-91dfe22b06c6)
+
+
 
 ## 🌟 Key Benefits
 

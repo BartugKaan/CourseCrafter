@@ -11,10 +11,7 @@ export default function Home() {
       <header className="relative overflow-hidden">
         <div className="container mx-auto px-4 py-6">
           <nav className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">C</span>
-              </div>
+            <div className="flex items-center">
               <span className="text-2xl font-bold text-gray-900">
                 CourseCrafter
               </span>

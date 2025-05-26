@@ -87,8 +87,12 @@ export default function NotFound() {
         {/* Brand Footer */}
         <div className="mt-12 pt-8 border-t border-gray-200">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-8 h-8 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">C</span>
+            <div className="w-8 h-8 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center p-1">
+              <img
+                src="/favicon-32x32.png"
+                alt="CourseCrafter Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="text-xl font-bold text-gray-900">
               CourseCrafter

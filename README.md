@@ -1,36 +1,163 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 CourseCrafter
 
-## Getting Started
+**Transform your expertise into structured, engaging courses with AI power!**
 
-First, run the development server:
+CourseCrafter is a modern web application that helps educators and professionals create comprehensive learning content effortlessly using AI. Whether you're a teacher, trainer, or someone who wants to organize knowledge into structured courses, CourseCrafter makes it simple and fast.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![CourseCrafter Banner](https://img.shields.io/badge/CourseCrafter-AI%20Powered%20Course%20Creation-green?style=for-the-badge&logo=graduation-cap)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🚀 **AI-Powered Course Generation**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Generate comprehensive course structures in minutes
+- Create 3-5 modules with detailed lessons
+- Progressive learning paths from beginner to advanced
 
-## Learn More
+### 🎯 **Smart Customization**
 
-To learn more about Next.js, take a look at the following resources:
+- **Course Levels**: Beginner, Intermediate, Advanced
+- **Multi-Language Support**: 8 languages including English, Turkish, Spanish, French, German, Italian, Portuguese, Russian
+- **Duration Planning**: Specify course duration (1-100 hours)
+- **Resource Flexibility**: Choose to include video resources or focus on text-based content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📱 **Modern User Experience**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Beautiful, responsive design that works on all devices
+- Intuitive form-based course creation
+- Real-time course generation with loading states
+- Professional landing page with clear value proposition
 
-## Deploy on Vercel
+### 🔒 **Secure & Private**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Local API key storage (never sent to servers)
+- Client-side processing for privacy
+- Secure OpenAI API integration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **AI Integration**: OpenAI GPT-3.5-turbo
+- **Deployment**: Vercel-ready
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+- OpenAI API key
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/BartugKaan/coursecrafter.git
+   cd coursecrafter
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Run the development server**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Setting Up OpenAI API
+
+1. Get your OpenAI API key from [OpenAI Platform](https://platform.openai.com/api-keys)
+2. When you first use CourseCrafter, you'll be prompted to enter your API key
+3. The key is stored locally in your browser for future use
+
+## 📖 How to Use
+
+1. **Enter Course Details**
+
+   - Provide a course title and description
+   - Select the appropriate difficulty level
+   - Choose your preferred language
+   - Set estimated duration (optional)
+   - Decide on video resource inclusion
+
+2. **Generate Course**
+
+   - Click "Generate Course Content"
+   - Wait for AI to create your structured course
+   - Review the generated modules and lessons
+
+3. **Customize & Export**
+   - Review the generated content
+   - Make any necessary adjustments
+   - Use the structured course for your teaching needs
+
+## 🎨 Screenshots
+
+- Coming Soon
+
+### Landing Page
+
+Beautiful, modern landing page with clear value proposition and feature highlights.
+
+### Course Creation Form
+
+Intuitive form with all customization options for creating the perfect course.
+
+### 404 Page
+
+Even our error pages are designed with care and provide helpful navigation options.
+
+## 🌟 Key Benefits
+
+- **⚡ Lightning Fast**: Generate courses in minutes, not hours
+- **🎯 Smart & Adaptive**: AI adapts to your specific requirements
+- **📱 Mobile Ready**: Works perfectly on all devices
+- **🌍 Multi-Language**: Create courses in 8 different languages
+- **🎓 Educational Focus**: Designed specifically for learning content
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how you can help:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- OpenAI for providing the powerful GPT API
+- Next.js team for the amazing framework
+- Tailwind CSS for the beautiful styling system
+- All contributors and users who make this project better
+
+## 📞 Support
+
+If you have any questions or need help:
+
+- 🐛 [Report a bug](https://github.com/BartugKaan/coursecrafter/issues)
+- 💡 [Request a feature](https://github.com/BartugKaan/coursecrafter/issues)
+- ⭐ [Star the project](https://github.com/BartugKaan/coursecrafter) if you find it useful!

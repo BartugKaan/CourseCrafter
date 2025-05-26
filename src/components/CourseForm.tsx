@@ -16,6 +16,10 @@ const CourseForm = ({ onCourseGenerated }: CourseFormProps) => {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [loading, setLoading] = useState(false)
+  const [courseLevel, setCourseLevel] = useState('beginner')
+  const [courseLanguage, setCourseLanguage] = useState('en')
+  const [courseDuration, setCourseDuration] = useState('')
+  const [includeVideos, setIncludeVideos] = useState('yes')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -29,7 +33,15 @@ const CourseForm = ({ onCourseGenerated }: CourseFormProps) => {
     }
 
     try {
-      const result = await generateCourse(title, description, apiKey)
+      const result = await generateCourse(
+        title,
+        description,
+        apiKey,
+        courseLevel,
+        courseLanguage,
+        courseDuration,
+        includeVideos
+      )
 
       // Ensure result is an array before setting modules
       if (Array.isArray(result) && result.length > 0) {
@@ -97,6 +109,76 @@ const CourseForm = ({ onCourseGenerated }: CourseFormProps) => {
               className="w-full px-4 py-3 text-gray-900 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 placeholder-gray-400 resize-none"
               required
             />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {/* Course Level */}
+            <div className="space-y-2">
+              <label className="block text-sm font-semibold text-gray-900">
+                Course Level
+              </label>
+              <select
+                value={courseLevel}
+                onChange={(e) => setCourseLevel(e.target.value)}
+                className="w-full px-4 py-3 text-gray-900 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer"
+              >
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
+
+            {/* Course Language */}
+            <div className="space-y-2">
+              <label className="block text-sm font-semibold text-gray-900">
+                Course Language
+              </label>
+              <select
+                value={courseLanguage}
+                onChange={(e) => setCourseLanguage(e.target.value)}
+                className="w-full px-4 py-3 text-gray-900 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer"
+              >
+                <option value="en">English</option>
+                <option value="tr">Turkish</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="it">Italian</option>
+                <option value="pt">Portuguese</option>
+                <option value="ru">Russian</option>
+              </select>
+            </div>
+
+            {/* Course Duration */}
+            <div className="space-y-2">
+              <label className="block text-sm font-semibold text-gray-900">
+                Course Duration (hours)
+              </label>
+              <input
+                type="number"
+                min="1"
+                max="100"
+                value={courseDuration}
+                onChange={(e) => setCourseDuration(e.target.value)}
+                placeholder="e.g., 8"
+                className="w-full px-4 py-3 text-gray-900 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 placeholder-gray-400"
+              />
+            </div>
+
+            {/* Include video resources */}
+            <div className="space-y-2">
+              <label className="block text-sm font-semibold text-gray-900">
+                Include Video Resources?
+              </label>
+              <select
+                value={includeVideos}
+                onChange={(e) => setIncludeVideos(e.target.value)}
+                className="w-full px-4 py-3 text-gray-900 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer"
+              >
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
           </div>
 
           {/* Submit Button */}

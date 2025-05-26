@@ -3,20 +3,57 @@ import { Module } from '@/models/course'
 export default async function generateCourse(
   title: string,
   description: string,
-  apiKey: string
+  apiKey: string,
+  courseLevel: string = 'beginner',
+  courseLanguage: string = 'en',
+  courseDuration: string = '',
+  includeVideos: string = 'yes'
 ): Promise<Module[]> {
+  // Helper function to get language name
+  const getLanguageName = (code: string) => {
+    const languages: { [key: string]: string } = {
+      en: 'English',
+      tr: 'Turkish',
+      es: 'Spanish',
+      fr: 'French',
+      de: 'German',
+      it: 'Italian',
+      pt: 'Portuguese',
+      ru: 'Russian',
+    }
+    return languages[code] || 'English'
+  }
+
   const prompt = `
   Create a comprehensive course structure for the following:
   
   Course Title: ${title}
   Course Description: ${description}
+  Course Level: ${courseLevel} (adjust complexity accordingly)
+  Course Language: ${getLanguageName(courseLanguage)} (respond in this language)
+  ${
+    courseDuration
+      ? `Estimated Duration: ${courseDuration} hours (structure content to fit this timeframe)`
+      : ''
+  }
+  ${
+    includeVideos === 'yes'
+      ? 'Include video resource suggestions in lesson descriptions where appropriate.'
+      : 'Focus on text-based and interactive content without video resources.'
+  }
   
   Generate 3-5 modules for this course. Each module should have:
   - A clear, descriptive title
   - A detailed description explaining what students will learn
   - 4-6 lessons with specific titles and descriptions
   - The lessons should be in a progressive order, starting from the basics and gradually increasing in complexity
-  - Respond in the same language as the course title and description.
+  - Content complexity should match the specified course level (${courseLevel})
+  - All content should be in ${getLanguageName(courseLanguage)}
+  ${
+    includeVideos === 'yes'
+      ? '- Include suggestions for video content, tutorials, or demonstrations where relevant'
+      : '- Focus on practical exercises, readings, and hands-on activities'
+  }
   
   IMPORTANT: You must respond with valid JSON in exactly this format:
   {

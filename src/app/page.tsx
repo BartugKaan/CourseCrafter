@@ -20,7 +20,7 @@ export default function Home() {
               </span>
             </div>
             <Link
-              href={'https://github.com/BartugKaan/coursecrafter'}
+              href={'https://github.com/BartugKaan/CourseCrafter'}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl border border-gray-700 hover:border-gray-600 group"

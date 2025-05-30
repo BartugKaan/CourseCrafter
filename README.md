@@ -21,7 +21,6 @@ You can test it via: <a href="https://course-crafter-one.vercel.app/">CourseCraf
 - **Course Levels**: Beginner, Intermediate, Advanced
 - **Multi-Language Support**: 8 languages including English, Turkish, Spanish, French, German, Italian, Portuguese, Russian
 - **Duration Planning**: Specify course duration (1-100 hours)
-- **Resource Flexibility**: Choose to include video resources or focus on text-based content
 
 ### 📱 **Modern User Experience**
 
@@ -32,7 +31,6 @@ You can test it via: <a href="https://course-crafter-one.vercel.app/">CourseCraf
 
 ### 🔒 **Secure & Private**
 
-- Local API key storage (never sent to servers)
 - Client-side processing for privacy
 - Secure Gemini API integration
 
@@ -104,8 +102,6 @@ You can test it via: <a href="https://course-crafter-one.vercel.app/">CourseCraf
 
    Replace `your_gemini_api_key_here` with your actual Gemini API key.
 
-3. When you first use CourseCrafter, you'll be prompted to enter your API key
-4. The key is stored locally in your browser for future use
 
 ## 📖 How to Use
 
@@ -115,7 +111,6 @@ You can test it via: <a href="https://course-crafter-one.vercel.app/">CourseCraf
    - Select the appropriate difficulty level
    - Choose your preferred language
    - Set estimated duration (optional)
-   - Decide on video resource inclusion
 
 2. **Generate Course**
 
